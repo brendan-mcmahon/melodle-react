@@ -1,6 +1,6 @@
 import Modal from "./Modal";
 
-export default function MelodleSettings(props) {
+export default function WelcomeModal(props) {
   const handleGameModeChange = (event) => {
     props.setSettings({ ...props.settings, difficulty: event.target.value });
   };
@@ -11,7 +11,14 @@ export default function MelodleSettings(props) {
   };
 
   return (
-    <Modal title="Settings" showClose={false} isOpen={props.show} id="melodle-settings-dialog">
+    <Modal title="Melodle" showClose={false} isOpen={props.show} id="melodle-settings-dialog">
+      <p>Click on the record player to hear a melody</p>
+      <p>Then play it back on the piano</p>
+      <p>When you think you've got it right, hit submit!</p>
+      <p>Incorrect notes will stay <span className="grey">grey</span>.
+        Notes that are in the wrong position will turn <span className="orange">orange</span>
+        and notes that are correct will turn <span className="blue">blue</span>
+        </p>
       <form onSubmit={handleSubmit}>
         <p>Difficulty:</p>
         <div className="radio-group">

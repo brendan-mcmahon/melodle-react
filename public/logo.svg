@@ -1,0 +1,40 @@
+<svg class="piano" height="236" width="100%" viewbox="11 0 240 240">
+    <g transform="translate(12, 0)">
+        <g class="white-note undefined" cursor="pointer">
+            <rect class="shadow" x="12" y="24" width="34.5" height="200" fill="#526d73" ry="14.833333333333334"></rect>
+            <rect class="key" x="0" y="12" width="34.5" height="200" fill="white" ry="14.833333333333334"></rect>
+            <text x="17.25" y="168" fill="black" text-anchor="middle" dominant-baseline="middle" font-size="28">M</text>
+        </g>
+        <g transform="translate(0 16)" class="white-note undefined" cursor="pointer">
+            <rect class="shadow" x="56.5" y="24" width="34.5" height="200" fill="#526d73" ry="14.833333333333334">
+            </rect>
+            <rect class="key" x="44.5" y="12" width="34.5" height="200" fill="white" ry="14.833333333333334"></rect>
+            
+        </g>
+        <g transform="translate(0 16)" class="white-note undefined" cursor="pointer">
+            <rect class="shadow" x="101" y="24" width="34.5" height="200" fill="#526d73" ry="14.833333333333334"></rect>
+            <rect class="key" x="89" y="12" width="34.5" height="200" fill="white" ry="14.833333333333334"></rect>
+        </g>
+        <g class="white-note undefined" cursor="pointer">
+            <rect class="shadow" x="145.5" y="24" width="34.5" height="200" fill="#526d73" ry="14.833333333333334">
+            </rect>
+            <rect class="key" x="133.5" y="12" width="34.5" height="200" fill="white" ry="14.833333333333334"></rect>
+            
+                font-size="28">B</text>
+        </g>
+        
+        <g class="black-note undefined" cursor="pointer">
+            <rect class="shadow" x="17.75" y="0" width="39.5" height="120" fill="black" ry="22.25"></rect>
+            <rect class="key" x="17.75" y="0" width="39.5" height="100" fill="#213640" ry="22.25"></rect>
+            <text x="37.5" y="72" fill="white" text-anchor="middle" dominant-baseline="middle" font-size="28">E</text>
+        </g>
+        <g transform="translate(0 32)" class="black-note undefined" cursor="pointer">
+            <rect class="shadow" x="62.25" y="0" width="39.5" height="120" fill="black" ry="22.25"></rect>
+            <rect class="key" x="62.25" y="0" width="39.5" height="100" fill="#213640" ry="22.25"></rect>
+        </g>
+        <g class="black-note undefined" cursor="pointer">
+            <rect class="shadow" x="106.75" y="0" width="39.5" height="120" fill="black" ry="22.25"></rect>
+            <rect class="key" x="106.75" y="0" width="39.5" height="100" fill="#213640" ry="22.25"></rect>
+        </g>
+    </g>
+</svg>

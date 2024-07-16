@@ -7,20 +7,18 @@ import { Squares } from "./Squares";
 import PlayButton from "./header/PlayButton";
 import { DeleteButton } from "./DeleteButton";
 import { PianoKeyboard } from "./keyboard/PianoKeyboard";
-import MelodleSettings from "./MelodleSettings";
+import WelcomeModal from "./WelcomeModal";
 import { getScores, save } from "./storage";
+import GameOverModal from "./GameOverModal";
+import { justDate } from "./utilities";
 
 const allowedAttempts = 6;
-
-const justDate = (date) => {
-  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
-};
 
 const copyGuesses = (arr) => {
   return arr.map((row) => row.map((item) => ({ ...item })));
 };
 
-const Melodle = () => {
+const App = () => {
   const melodyLength = melody.notes.filter((n) => !!n.pitch).length;
   const cursor = useCursor(allowedAttempts, melodyLength);
   const [showSettingsModal, setShowSettingsModal] = useState(true);
@@ -94,33 +92,37 @@ const Melodle = () => {
 
     if (newGuesses[cursor.row].every((guess) => guess.status === "correct")) {
       setGameOverStatus("You win!");
-      save({
-        date: justDate(new Date()),
-        difficulty: settings.difficulty,
-        guesses: newGuesses,
-        melody,
-        gameOverStatus: "You win!",
-      });
+      saveGame(newGuesses, "You win!");
     } else {
       if (cursor.row === allowedAttempts - 1) {
-        setGameOverStatus("You lose!");
-        save({ difficulty: settings.difficulty, guesses: newGuesses, melody, gameOverStatus: "You lose!" });
+        saveGame(newGuesses, "You lose!");
       } else {
         cursor.nextRow();
       }
     }
   };
 
+  const saveGame = (newGuesses, status) => {
+    save({
+      date: justDate(new Date()),
+      difficulty: settings.difficulty,
+      guesses: newGuesses,
+      melody,
+      gameOverStatus: status
+    });
+  };
+
   const deleteButtonDisabled = cursor.column === 0;
 
   return (
     <div id="melodle" className="game-container-container">
-      <MelodleSettings
+      <WelcomeModal
         show={showSettingsModal}
         close={() => setShowSettingsModal(false)}
         settings={settings}
         setSettings={setSettings}
       />
+      <GameOverModal show={gameOverStatus !== null} victory={gameOverStatus === "You win!"} guesses={guesses} />
       <div className="game-container">
         <header>
           <div id="header-text">
@@ -146,4 +148,4 @@ const Melodle = () => {
   );
 };
 
-export default Melodle;
+export default App;

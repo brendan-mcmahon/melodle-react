@@ -1,5 +1,4 @@
-* Publish
-* Sharing
+* Free Play mode
 * New Font
 * Add shadows to black keys
 * Make keys go down when you push them

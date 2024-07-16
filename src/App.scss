@@ -65,29 +65,53 @@ h1 {
 }
 
 .modal-content {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+
   background: var(--white);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1001;
-}
-
-.modal-content {
-  margin: 3rem;
-  display: flex;
-  flex-direction: column;
 
   .dialog-header {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 
     h1 {
       text-align: center;
+      margin: 0;
     }
 
     button {
       align-self: flex-start;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+
+    .grey {
+      background-color: #ccc;
+      color: var(--black);
+      padding: 0.25rem;
+      border-radius: 1rem;
+    }
+
+    .orange {
+      background-color: var(--orange);
+      color: var(--black);
+      padding: 0.25rem;
+      border-radius: 1rem;
+    }
+
+    .blue {
+      background-color: var(--green);
+      color: var(--white);
+      padding: 0.25rem;
+      border-radius: 1rem;
     }
   }
 }

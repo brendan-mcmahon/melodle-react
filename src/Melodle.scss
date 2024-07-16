@@ -256,14 +256,18 @@ html {
             }
         }
     }
+}
 
-    .btn-icon {
-        background-color: transparent;
-        border: none;
-        padding: 0;
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    padding: 0;
 
-        // button with id of "submit" needs disabled styles
-    }
+    // button with id of "submit" needs disabled styles
+}
+
+#share-button {
+    margin-top: 1rem;
 }
 
 
