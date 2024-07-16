@@ -16,9 +16,9 @@ export default function WelcomeModal(props) {
       <p>Then play it back on the piano</p>
       <p>When you think you've got it right, hit submit!</p>
       <p>Incorrect notes will stay <span className="grey">grey</span>.
-        Notes that are in the wrong position will turn <span className="orange">orange</span>
-        and notes that are correct will turn <span className="blue">blue</span>
-        </p>
+        <p>Notes that are in the wrong position will turn <span className="orange">orange</span></p>
+        <p>and notes that are correct will turn <span className="blue">blue</span></p>
+      </p>
       <form onSubmit={handleSubmit}>
         <p>Difficulty:</p>
         <div className="radio-group">
