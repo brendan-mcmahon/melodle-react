@@ -1,0 +1,93 @@
+:root {
+  --green: #1a9ab1;
+  --dark-green: #0f5f6b;
+  --orange: #fd722f;
+  --dark-orange: rgb(197, 71, 29);
+  --black: #14232a;
+  --white: #a5afa9;
+  --shadow-1: #b6c2be;
+  --shadow-2: #526d73;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: "vividly";
+  src: url("./assets/Vividly-Regular.otf") format("truetype");
+}
+
+html {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--green);
+}
+
+body,
+.root {
+  font-family: "vividly", sans-serif;
+  font-size: 1.5rem;
+  color: var(--black);
+  margin: 0;
+}
+
+button {
+  background-color: var(--orange);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  cursor: pointer;
+  font-family: "vividly", sans-serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+.modal-content {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  .dialog-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    h1 {
+      text-align: center;
+    }
+
+    button {
+      align-self: flex-start;
+    }
+  }
+}
